@@ -41,4 +41,5 @@ server_metadata_url = "https://accounts.google.com/.well-known/openid-configurat
 Resources:
 - [st.login](https://docs.streamlit.io/develop/api-reference/user/st.login)
 - [Streamlit 1.42.0 release note](https://docs.streamlit.io/develop/quick-reference/release-notes#version-1420-latest)
+- [Use the Google Auth Platform to authenticate users](https://docs.streamlit.io/develop/tutorials/authentication/google)
 - [Fanilo - I Tried Adding Google Auth To a Streamlit App (It Didn't Go Well)](https://www.youtube.com/watch?v=0M4K53XBsjo&ab_channel=FaniloAndrianasolo)
