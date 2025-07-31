@@ -20,10 +20,10 @@ else:
     
     # Add subscription check for logged-in users
     add_auth(required=True,use_sidebar=False)
-    
+
     if st.toggle("Show subscription status"):
         # Display subscription status
-        st.sidebar.write(st.session_state.subscription)
+        st.sidebar.write(st.session_state.subscriptions)
 
     # Your app code here - only runs for subscribed users
     st.header("Premium content🔐")
