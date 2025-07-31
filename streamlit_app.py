@@ -9,8 +9,6 @@ st.title("My super SaaS 🚀")
 if not st.user.is_logged_in:
     st.button("Login with Google", on_click=st.login,type="primary")
 else:
-    # Add subscription check for logged-in users
-    add_auth()
     
     # User is logged in
     col1, col2 = st.columns([3, 1])
@@ -20,6 +18,13 @@ else:
     with col2:
         st.button("Logout", on_click=st.logout)
     
+    # Add subscription check for logged-in users
+    add_auth(required=True,use_sidebar=False)
+    
+    if st.toggle("Show subscription status"):
+        # Display subscription status
+        st.sidebar.write(st.session_state.subscription)
+
     # Your app code here - only runs for subscribed users
     st.header("Premium content🔐")
     st.write("This content is only visible to subscribers.")

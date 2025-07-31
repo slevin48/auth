@@ -52,6 +52,11 @@ You also need to create an [Standard API key](https://dashboard.stripe.com/test/
 
 `stripe_api_key = 'sk_...'`
 
+Make sure to choose a *Recurring* subscription model (not
+one-time payment) and set the price for the subscription.
+Otherwise the st-paywall will not work.
+![subscription-model](img/subscription-model.png)
+
 Resources:
 - [st.login](https://docs.streamlit.io/develop/api-reference/user/st.login)
 - [Streamlit 1.42.0 release note](https://docs.streamlit.io/develop/quick-reference/release-notes#version-1420-latest)
