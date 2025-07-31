@@ -38,7 +38,22 @@ client_secret = "YOUR_CLIENT_SECRET"
 server_metadata_url = "https://accounts.google.com/.well-known/openid-configuration"
 ```
 
+**Stripe**
+
+Once you make an account, you need to make a [payment subscription link](https://dashboard.stripe.com/test/payment-links/create) (which is in test mode by default) and add the link to your app.
+
+![payment-links](img/payment-links2.png)
+
+The subscription link should be added to `secrets.toml` like this:
+
+`stripe_link = 'https://buy.stripe.com/test_...'`
+
+You also need to create an [Standard API key](https://dashboard.stripe.com/test/apikeys), which just like subscription links have test options as well. 
+
+`stripe_api_key = 'sk_...'`
+
 Resources:
 - [st.login](https://docs.streamlit.io/develop/api-reference/user/st.login)
 - [Streamlit 1.42.0 release note](https://docs.streamlit.io/develop/quick-reference/release-notes#version-1420-latest)
 - [Fanilo - I Tried Adding Google Auth To a Streamlit App (It Didn't Go Well)](https://www.youtube.com/watch?v=0M4K53XBsjo&ab_channel=FaniloAndrianasolo)
+- [st-paywall](https://st-paywall.readthedocs.io/)
