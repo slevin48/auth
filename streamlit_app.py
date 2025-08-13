@@ -29,6 +29,8 @@ else:
     st.header("Premium content🔐")
     st.write("This content is only visible to subscribers.")
 
+    st.link_button("Access my subscription","https://billing.stripe.com/p/login/test_aFa28s2sf16F8Vu3mzfQI00",type="primary")
+
     if st.toggle("Show User Info"):
         # Display user info
         with st.sidebar:
